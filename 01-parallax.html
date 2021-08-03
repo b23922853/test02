@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+        nav{
+            width: 100%;
+            height: 50px;
+            
+            background-color: yellow;
+            line-height: 50px;
+            padding: 0px 50px;
+
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+
+
+            text-align: center;
+        }
+        a{
+            background-color: aqua;
+            display: inline;
+        }
+        a:last-child{
+            margin: 0px;
+        }
+        .pic{
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            background-attachment: fixed;
+        }
+        .img1{
+            background-image: url('https://www.obonparis.com/uploads/Orleans/The%20saint-croix%20cathedral%20.jpg');
+            height: 900px;
+        }
+        .img2{
+            background-image: url('https://pgw.worldjournal.com/gw/photo.php?u=https://uc.udn.com.tw/photo/wj/paper/2021/05/04/12223486.jpg');
+            height: 700px;
+ 
+        }
+        .img3{
+            background-image: url('https://www.hotelscombined.com.tw/news/wp-content/uploads/sites/316/2018/06/batch_shutterstock_295136693-Copy.jpg');
+            height: 700px;
+        }
+        .img4{
+            background-image: url('https://image.kkday.com/v2/image/get/w_960%2Cc_fit%2Cq_55%2Ct_webp/s1.kkday.com/product_24673/20190528102249_jBbDy/jpg');
+            height: 600px;
+        }
+        .title{
+            width: 140px;
+            height: 55px;
+            font-size: 32px;
+            
+            /*  讓自己水平垂直置中 position置中法 
+                參考點的父層的一半(前面的50%)
+                扣掉自己的一半(後面的 px) */
+            position: absolute;
+            top: calc(50% - 25px);
+            left: calc(50% - 70px);
+
+            /* 讓元素內的單行文字 水平垂直置中 */
+            text-align: center;
+            line-height: 55px;
+        }
+        .img1 .title{
+            background-color: rgba(102, 51, 153);
+            color: white;
+        }
+        .img2 .title{
+            background-color: turquoise;
+        }
+        .img3 .title{
+            background-color: violet;
+            color: blue;
+        }
+        .img4 .title{
+            background-color: yellow;
+        }
+        .text{
+            width: 100%;
+            padding: 60px 120px;
+            background-color: palevioletred;
+        }
+        .text div{
+            text-align: center;
+            
+            font-size: 32px;
+        }
+        body{
+            padding-top: 50px;
+            
+        }
+        #anchor01{
+            position: absolute;
+            top:-50px; 
+        }
+        #anchor02{
+            position: absolute;
+            top:-50px; 
+        }
+        #anchor03{
+            position: absolute;
+            top:-50px; 
+        }
+        #anchor04{
+            position: absolute;
+            top:-50px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 錨點:在超連結中，href填上# + id 即可連到頁面中指定的位置 -->
+    <nav>
+        <a href="#anchor01" class="wassup">奧爾良</a>
+        <a href="#anchor02">羅馬</a>
+        <a href="#anchor03">倫敦</a>
+        <a href="#anchor04">巴黎</a>
+    </nav>
+    <div class="pic img1" >
+        <div id="anchor01"></div>
+    <!-- 
+        <div class="title" id="anchor01">
+            奧爾良
+        </div>
+    -->
+        <div class="title">
+            
+            奧爾良
+        </div>
+    </div>
+    <div class="text">
+        <div>聖女貞德的故鄉</div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Reprehenderit veniam voluptate nihil doloremque doloribus impedit perspiciatis ipsam consequatur,
+        exercitationem ut illo rem qui inventore ducimus quae tempora iste molestias fugit.
+    </div>
+    <div class="pic img2">
+        <div id="anchor02"></div>
+        <div class="title">羅馬</div>
+    </div>
+    <div class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Cupiditate et, dolores facilis non enim quae totam alias 
+        reprehenderit atque sapiente fuga esse, impedit nihil deserunt 
+        quaerat dolore veritatis a exercitationem.
+    </div>
+    <div class="pic img3">
+        <div id="anchor03"></div>
+        <div class="title">
+            
+            倫敦
+        </div>
+    </div>
+    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Ab voluptate fugiat odio nisi eligendi nihil deleniti, eaque expedita 
+        vero neque corrupti, aperiam, eius animi facilis? Quis commodi quae inventore deleniti!
+    </div>
+    <div class="pic img4">
+        <div id="anchor04"></div>
+        <div class="title" >
+            
+            巴黎
+        </div>
+    </div>
+
+
+</body>
+</html>
